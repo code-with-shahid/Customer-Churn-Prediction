@@ -1,0 +1,66 @@
+
+---
+
+## 📈 Dataset
+
+- **Source**: [Kaggle - Telco Customer Churn](https://www.kaggle.com/blastchar/telco-customer-churn)
+- **Size**: ~7,000 customers
+- **Features**: Customer demographics, services used, billing info, and churn label
+
+---
+
+## 🛠️ Technologies Used
+
+- Python 3.x
+- pandas, NumPy
+- matplotlib, seaborn
+- scikit-learn, XGBoost
+- SHAP for model interpretability
+
+---
+
+## 🔬 Exploratory Data Analysis (EDA)
+
+- Churn rate observed: ~26.5%
+- Key drivers: Contract type, monthly charges, tech support
+- Visualizations: Heatmaps, boxplots, bar charts
+
+---
+
+## 🧠 Model Training & Evaluation
+
+| Model              | Accuracy | ROC-AUC | F1-Score |
+|-------------------|----------|---------|----------|
+| Logistic Regression | 80.3%  | 0.84    | 0.76     |
+| Random Forest       | 83.4%  | 0.87    | 0.79     |
+| XGBoost (Tuned)     | ✅ 85.1%  | ✅ 0.89    | ✅ 0.81     |
+
+✅ Best performance achieved using tuned XGBoost with GridSearchCV and SMOTE for imbalance handling.
+
+---
+
+## 💬 Explainability – SHAP Analysis
+
+- Top Features: `Contract`, `MonthlyCharges`, `TechSupport`, `Tenure`
+- Used SHAP summary and dependence plots to understand feature influence.
+
+---
+
+## 💡 Business Insights
+
+- Customers with month-to-month contracts and high monthly charges are 3x more likely to churn.
+- Recommending long-term contracts and offering tech support bundles could reduce churn.
+
+---
+
+## 🚀 Future Improvements
+
+- Add a Streamlit dashboard for real-time churn prediction
+- Test TabTransformer for deep learning on tabular data
+- Perform time-series churn prediction on temporal user behavior
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
